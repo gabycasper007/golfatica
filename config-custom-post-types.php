@@ -53,9 +53,8 @@ if (class_exists('Golfatica_Custom_Post_Types')) {
 				'menu_icon' => 'dashicons-admin-post',
 			),
 			'taxonomies' => array(
-				'generaltax' => array('post_type' => 'rabbit'),
+				'generaltax' => '',
 				'posttypetax' => array(
-					'post_type' => 'post',
 					'args' => array(
 				       	'labels' => array(
 				       		'name' => _x('PLptx', TEXT_DOMAIN),
