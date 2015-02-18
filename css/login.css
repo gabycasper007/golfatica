@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'gillSans-semibold';
+    src: url('../fonts/GillSans-SemiBold.eot');
+    src: url('../fonts/GillSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GillSans-SemiBold.woff') format('woff'),
+         url('../fonts/GillSans-SemiBold.ttf') format('truetype'),
+         url('../fonts/GillSans-SemiBold.svg#gillSans-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background: url("../img/login-bg.png") no-repeat scroll 10% 30% #000;
+    font: 14px gillSans-semibold;
+}
+.login #nav a, .login #backtoblog a, .login #nav a:hover, .login #backtoblog a:hover {
+    color: #fff;
+    -webkit-transition: .15s all ease-in-out;
+    -o-transition: .15s all ease-in-out;
+    transition: .15s all ease-in-out;
+}
+
+.login .button-primary, .login .button-primary:hover, .login .button-primary:focus, .login .button-primary:active {
+    border-color: #AE0404;
+    background: #c60505; /* Old browsers */
+    background: -moz-linear-gradient(top, #c60505 0%, #AE0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c60505), color-stop(100%,#AE0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #c60505 0%,#AE0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #c60505 0%,#AE0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #c60505 0%,#AE0404 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #c60505 0%,#AE0404 100%); /* W3C */
+
+    -webkit-transition: .15s all ease-in-out;
+    -o-transition: .15s all ease-in-out;
+    transition: .15s all ease-in-out;
+}
+.login .button-primary:hover, .login .button-primary:focus, .login .button-primary:active, .login #nav a:hover, .login #backtoblog a:hover  {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.login #login h1 a {
+    background: url(../img/login-logo.png) no-repeat;
+    -webkit-background-size: 200px auto;
+    background-size: 200px auto;
+    width: 200px;
+    height: 77px;
+}
+.login .message {
+    border-color: #c60505;
+}

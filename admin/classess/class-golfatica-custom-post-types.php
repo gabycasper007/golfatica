@@ -30,11 +30,8 @@ if ( !class_exists('Golfatica_Custom_Post_Types') ) {
 			add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 			add_filter( 'bulk_post_updated_messages', array( $this, 'bulk_updated_messages' ), 10, 2 );
 
-			if ( class_exists('Golfatica_Custom_Help_Tab') ) {
-				new Golfatica_Custom_Help_Tab( 'post', $this->post_type, $this->args );
-			}
-
-			$this->_get_taxonomies();
+			$this->set_help_tab( $this->args );
+			$this->set_taxonomies();
 
 
 		} // End __construct ()
@@ -142,11 +139,21 @@ if ( !class_exists('Golfatica_Custom_Post_Types') ) {
 		}
 
 		/**
+		 * Set The Help Tab
+		 * @param [type] $args [description]
+		 */
+		public function set_help_tab( $args ) {
+			if ( class_exists('Golfatica_Custom_Help_Tab') ) {
+				new Golfatica_Custom_Help_Tab( 'post', $this->post_type , $args );
+			}
+		}
+
+		/**
 		 * Get Requested Taxonomies
 		 * @return void
 		 * @since 1.0
 		 */
-		protected function _get_taxonomies() {
+		protected function set_taxonomies() {
 			if ( class_exists('Golfatica_Custom_Taxonomies') && isset( $this->args->taxonomies )) {
 				foreach ($this->args->taxonomies as $taxonomy => $custom_taxonomy) {
 
@@ -162,7 +169,7 @@ if ( !class_exists('Golfatica_Custom_Post_Types') ) {
 					new Golfatica_Custom_Taxonomies( $taxonomy, $custom_taxonomy );
 				}
 			}
-		} // End _get_taxonomies
+		} // End set_taxonomies
 
 	} // End class Golfatica_Custom_Post_Types
 

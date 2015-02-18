@@ -79,4 +79,4 @@ if (class_exists('Golfatica_Custom_Taxonomies')) {
 		new Golfatica_Custom_Taxonomies( $taxonomy, $custom_taxonomy );
 	}
 
-}
+} // End if (class_exists('Golfatica_Custom_Taxonomies'))

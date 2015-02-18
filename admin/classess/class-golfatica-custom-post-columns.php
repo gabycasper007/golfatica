@@ -9,6 +9,7 @@ if ( !class_exists('Golfatica_Custom_Post_Columns') ) {
 	// TODO: Function for re-arranging the columns
 	// TODO: Function for removing columns
 	// TODO: Order by post__in, meta_value_num, rand
+	// TODO: Custom sorting, not numerical or alphabetical: http://wpdreamer.com/2014/04/how-to-make-your-wordpress-admin-columns-sortable/
 	*/
 	class Golfatica_Custom_Post_Columns {
 

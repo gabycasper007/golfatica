@@ -16,7 +16,6 @@ if (class_exists('Golfatica_Custom_Post_Types')) {
 	 * @since 1.0
 	 */
 	$golfatica_custom_posts = array(
-		'test' => array(), 
 		'rabbit' => array(),
 		'newpostt' => array(
 			'args' => array(
@@ -126,6 +125,76 @@ if (class_exists('Golfatica_Custom_Post_Types')) {
 	foreach ($golfatica_custom_posts as $post_type => $golfatica_custom_post) {
 		new Golfatica_Custom_Post_Types( $post_type, $golfatica_custom_post );
 	}
+	$test = new Golfatica_Custom_Post_Types( 'test', array() );
+
+	$args = array(
+		'help_tabs' => array(
+			array(
+				'title'   => __( 'Help for the THIS SETTER Tabs', TEXT_DOMAIN ),
+				'id'      => 'newpostt_help_tabs', // UNIQUE id for the tab
+				'content' => __( '<h3>Help tab for the THIS SETTER </h3><p>Help content for the THIS SETTER </p>', TEXT_DOMAIN ),
+			),
+			array(
+				'title'   => __( 'Help for the THIS SETTER Tabs 2', TEXT_DOMAIN ),
+				'id'      => 'newpostt_help_tabs2', // UNIQUE id for the tab
+				'content' => __( '<h3>Title Tabs for the THIS SETTER 2</h3><p>Help2 content for the THIS SETTER </p>', TEXT_DOMAIN )
+			),
+		),
+		'help_sidebar' => __( 'THIS SETTER Sidebar INIT', TEXT_DOMAIN ),
+	);
+	$test->set_help_tab( $args );
+
+	// $args = array(
+	// 	'settaxtest' => array(
+	// 		'args' => array(
+	// 	       	'labels' => array(
+	// 	       		'name' => _x('Set Tax', TEXT_DOMAIN),
+	// 	       		'singular_name' => _x('Sets taxes', TEXT_DOMAIN),
+	// 	       		'menu_name' => 'Set Tax',
+	// 	       		'all_items' => sprintf( __( 'All %s' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'edit_item' => sprintf( __( 'Edit %s' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'view_item' => sprintf( __( 'View %s' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'update_item' => sprintf( __( 'Update %s' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'add_new_item' => sprintf( __( 'Add New %s' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'new_item_name' => sprintf( __( 'New %s Name' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'parent_item' => sprintf( __( 'Parent %s' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'parent_item_colon' => sprintf( __( 'Parent %s:' , TEXT_DOMAIN ), 'Sets taxes' ),
+	// 	       		'search_items' =>  sprintf( __( 'Search %s' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'popular_items' =>  sprintf( __( 'Popular %s' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'separate_items_with_commas' =>  sprintf( __( 'Separate %s with commas' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'add_or_remove_items' =>  sprintf( __( 'Add or remove %s' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'choose_from_most_used' =>  sprintf( __( 'Choose from the most used %s' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       		'not_found' =>  sprintf( __( 'No %s found' , TEXT_DOMAIN ), 'Set Tax' ),
+	// 	       	),
+	// 	       	'label' => 'PL Yppy',
+	// 			'public' => true,
+	// 			'show_ui' => true,
+	// 			'show_in_nav_menus' => true,
+	// 			'show_tagcloud' => true,
+	// 			'meta_box_cb' => null,
+	// 			'show_admin_column' => true,
+	// 	       	'hierarchical' => true, 
+	// 			'update_count_callback' => '',
+	// 			'query_var' => 'settaxtest',
+	// 			'rewrite' => true,
+	// 			'sort' => '',
+	// 		),
+	// 		'help_tabs' => array(
+	// 			array(
+	// 				'title'   => __( 'Help for the settaxtest Tabs', TEXT_DOMAIN ),
+	// 				'id'      => 'newpostt_help_tabs', // UNIQUE id for the tab
+	// 				'content' => __( '<h3>Help tab for the settaxtest </h3><p>Help content for the settaxtest </p>', TEXT_DOMAIN ),
+	// 			),
+	// 			array(
+	// 				'title'   => __( 'Help for the settaxtest Tabs 2', TEXT_DOMAIN ),
+	// 				'id'      => 'newpostt_help_tabs2', // UNIQUE id for the tab
+	// 				'content' => __( '<h3>Title Tabs for the settaxtest 2</h3><p>Help2 content for the settaxtest </p>', TEXT_DOMAIN )
+	// 			),
+	// 		),
+	// 		'help_sidebar' => __( 'settaxtest Sidebar INIT', TEXT_DOMAIN )
+	// 	),
+	// );
+	// $test->set_taxonomies( $args );
 
 	/**
 	 * TODO: flush_rewrite_rules(); because now you need to manually flush
