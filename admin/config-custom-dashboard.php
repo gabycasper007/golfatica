@@ -85,6 +85,6 @@ if (class_exists('Golfatica_Custom_Dashboard')) {
 	);
 	$dash = new Golfatica_Custom_Dashboard( $args );
 	// http://premium.wpmudev.org/blog/create-a-custom-wordpress-login-page/
-	// 
+	// http://codex.wordpress.org/Function_Reference/wp_login_form
 	// 
 } // End if (class_exists('Golfatica_Custom_Dashboard'))
